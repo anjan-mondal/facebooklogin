@@ -26,12 +26,14 @@ public class SeleniumPiTest {
       driver.get("https://www.fb.com");
       driver.findElement(By.name("email")).sendKeys("test");
 	  driver.findElement(By.name("pass")).sendKeys("test");
+	  System.out.println("testing success");
 	  driver.findElement(By.xpath("//*[@data-testid='royal_login_button']")).click();
       Thread.sleep(5000);
       
     } catch (Exception e) {
       System.out.println(e.getMessage());
     } finally {
+    	 System.out.println("quitting..");
       driver.quit();
     }
   }
