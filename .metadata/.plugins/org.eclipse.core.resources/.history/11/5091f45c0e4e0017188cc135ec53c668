@@ -1,0 +1,14 @@
+package com.cucumber;
+ 
+import org.junit.runner.RunWith; 
+import cucumber.junit.Cucumber; 
+
+@RunWith(Cucumber.class) 
+@Cucumber.Options(
+					features = "src/com/Cucumber/features/Login.feature", 
+					tags = "@tag1",
+					glue = "com.Cucumber.steps", 
+					plugin = { "pretty", "html:target/cucumber-report" }, 
+					monochrome = true)
+
+public class runTest { }
